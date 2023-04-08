@@ -1,0 +1,25 @@
+Script started on 2022-11-12 23:42:07+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ mycp
+[?2004l
+Usage: mycopy source_file [destination_file]
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ ls
+[?2004l
+hello.c            mycp.c  point.c              se6.c  [0m[01;34mΠ2020205-Π2020085[0m
+[01;32mKung_Fu_Panda.mp4[0m  new.c   script_ergasias.txt  wiki
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ mycp -b123 Kung_Fu_Panda.mp4  movie.m 
+p4
+[?2004l
+Time elapsed :20.911832 for buffer size 123 
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ mycp Kung_Fu_Panda.mp4 movie1.mp4
+[?2004l
+Time elapsed :15.764338 with Standard buffered I/O 
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ ls
+[?2004l
+hello.c            [0m[01;35mmovie.mp4[0m  point.c              wiki
+[01;32mKung_Fu_Panda.mp4[0m  mycp.c     script_ergasias.txt  [01;34mΠ2020205-Π2020085[0m
+[01;35mmovie1.mp4[0m         new.c      se6.c
+[?2004h]0;ektoras@ektoras-HP-255-G8-Notebook-PC: ~/c[01;32mektoras@ektoras-HP-255-G8-Notebook-PC[00m:[01;34m~/c[00m$ exir[Kt
+[?2004l
+exit
+
+Script done on 2022-11-12 23:43:42+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,64 @@
+Το περιβάλλον UNIX που χρησιμοποιήσαμε έχει τα παρακάτω στοιχεια:
+
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+DISTRIB_DESCRIPTION="Ubuntu 22.04.1 LTS"
+PRETTY_NAME="Ubuntu 22.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.1 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+
+=========================================================================================================
+
+Ψευδοκώδικας:
+
+main{
+	pipe1;
+	pipe2;
+	
+	id1 = fork;
+	
+	if id1 == 0{
+		read from file;
+		write to pipe1;
+	}
+	
+	id2 = fork
+	
+	if id2 == 0{
+		read from pipe1;
+		make lower to upper;
+		write to pipe2;
+	}
+	
+	id3 = fork
+	
+	if id3 == 0{
+		read from pipe2;
+		add "Data received through pipe " before every line;
+		write to terminal;
+	}
+	
+	if id1 != 0 {
+		wait id1;
+		wait id2;
+		wait id3;
+	}
+}
+
+============================================================================================================
+
+Ο πατέρας διεργασία κάνει fork τρεις φορές. Το πρώτο παιδί χρησιμοποιεί την εντόλη cat για να διαβασει απο το αρχείο,
+το δευτερο την εντολή tr για να κάνει τα πεζά γράμματα κεφαλαία και το τρίτο την εντολή sed για να προσθέσει το μήνυμα
+"Data received through pipe " πριν από κάθε γραμμή (με την συνάρτηση execlp). Ο πατέρας απλά περιμένει να 
+τελειώσουν τα παιδια. Για να γράφουν και να διαβάζουν τα παιδιά στα pipes που τα συνδέουν χρησιμοποιούν την 
+συνάρτηση dup2.
+
+Σημείωση: Το πρόγραμμα λειτουργεί μόνο σε αγγλικούς χαρακτήρες.
+
+ΕΚΤΩΡ ΓΕΩΡΓΙΟΣ ΚΟΜΠΟΣ Π2020205
+ΠΑΥΛΟΣ ΜΗΝΤΣΟΠΟΥΛΟΣ Π2020085
